@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="RadioButtonStyle" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/dark_violet</item>
+        <item name="android:textColorSecondary">@color/normalColor</item>
+    </style>
+    <style name="btn_register">
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:backgroundTint">@color/dark_violet</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
+</resources>

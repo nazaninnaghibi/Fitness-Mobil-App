@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.example.fitness.model.ModelShowAllUser" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:animateLayoutChanges="true"
+        tools:context=".view.fragment.UserProfileFragment">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.scwang.wave.MultiWaveHeader
+                    android:id="@+id/waveHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    app:mwhCloseColor="@color/dark_violet"
+                    app:mwhColorAlpha="0.45"
+                    app:mwhGradientAngle="45"
+                    app:mwhProgress="1"
+                    app:mwhStartColor="@color/bright_purple"
+                    app:mwhVelocity="1"
+                    app:mwhWaveHeight="50dp"
+                    app:mwhWaves="MultiWave" />
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:rotation="180"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/right" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background">
+
+                    <ImageView
+                        android:id="@+id/image"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="190dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/user"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginBottom="15dp"
+                        android:textColor="#FFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:text="@string/username" />
+
+                    <TextView
+                        android:id="@+id/UserDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="30dp"
+                        android:text="@string/user_details"
+                        android:textColor="@color/dark_violet"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/image" />
+
+
+                    <LinearLayout
+                        android:id="@+id/CardLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/UserDetails">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="1dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/height"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="@string/height"
+                                    android:textColor="@color/dark_violet"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/ImageHeight"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_below="@+id/height"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:contentDescription="@string/app_name"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/height" />
+
+                                <TextView
+                                    android:id="@+id/height_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageHeight"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:textColor="@color/dark_violet"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    tools:text="@string/height" />
+
+
+                            </RelativeLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="1dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/Age"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="@string/age"
+                                    android:textColor="@color/dark_violet"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/ImageAge"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_below="@+id/Age"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:contentDescription="@string/app_name"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/age" />
+
+                                <TextView
+                                    android:id="@+id/age_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageAge"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:text="@string/age"
+                                    android:textColor="@color/dark_violet"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                            </RelativeLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_wight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="15dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@+id/CardLine">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="1dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/Wight"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="@string/weight"
+                                    android:textColor="@color/dark_violet"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <ImageView
+                                    android:id="@+id/ImageWight"
+                                    android:layout_width="90dp"
+                                    android:layout_height="90dp"
+                                    android:layout_below="@+id/Wight"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    android:contentDescription="@string/app_name"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/wight" />
+
+                                <TextView
+                                    android:id="@+id/weight_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ImageWight"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginBottom="15dp"
+                                    android:text="@string/weight"
+                                    android:textColor="@color/dark_violet"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                            </RelativeLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/Description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:paddingBottom="20dp"
+                        android:text="@string/diet_favorite"
+                        android:textColor="@color/dark_violet"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@id/linear_wight" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RecyclerViewShowFavorite"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/Description"
+                        tools:itemCount="3"
+                        tools:listitem="@layout/itemsfavoriteuser" />
+
+                    <TextView
+                        android:id="@+id/comment_diet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="20dp"
+                        android:padding="20dp"
+                        android:visibility="gone"
+                        android:text="@string/display"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_violet"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@id/Exercise"
+                        app:layout_constraintTop_toBottomOf="@+id/Description" />
+
+                    <TextView
+                        android:id="@+id/Exercise"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:paddingTop="25dp"
+                        android:text="@string/exercise_favorite"
+                        android:textColor="@color/dark_violet"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/RecyclerViewShowFavorite" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/RecyclerViewShowFavoriteExercise"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        app:layout_constraintTop_toBottomOf="@id/Exercise"
+                        tools:listitem="@layout/itemsfavoriteuser" />
+
+                    <TextView
+                        android:id="@+id/exercise_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:lineSpacingExtra="20dp"
+                        android:padding="20sp"
+                        android:text="@string/display"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_violet"
+                        android:textSize="17sp"
+                        android:visibility="gone"
+                        android:textStyle="bold"
+                        app:layout_constraintTop_toBottomOf="@+id/Exercise" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

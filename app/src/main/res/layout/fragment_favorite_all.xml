@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        tools:context=".view.fragment.FavoriteAllFragment">
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:contentDescription="@string/app_name"
+            android:rotation="180"
+            android:scaleType="fitXY"
+            android:src="@drawable/right"
+            app:tint="@color/dark_violet"
+            tools:ignore="MissingConstraints" />
+
+        <com.jem.fliptabs.FlipTab
+            android:id="@+id/FlipTab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/back"
+            app:leftTabText="all favorite diet"
+            app:overallColor="@color/dark_violet"
+            app:rightTabText="all favorite exercise" />
+
+        <TextView
+            android:id="@+id/TheMost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/latest_favorites"
+            android:textColor="@color/dark_violet"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/FlipTab"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <TextView
+            android:id="@+id/Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:lineSpacingExtra="10dp"
+            android:padding="20dp"
+            android:text="@string/description_diet"
+            android:textAlignment="center"
+            android:textColor="@color/dark_violet"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/TheMost"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <TextView
+            android:id="@+id/no_diet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:lineSpacingExtra="20dp"
+            android:padding="20dp"
+            android:text="@string/comment_diet"
+            android:textAlignment="center"
+            android:textColor="@color/dark_violet"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/Description"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="4dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerViewFitnessDietItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toBottomOf="@+id/Description"
+            app:spanCount="2"
+            tools:listitem="@layout/itemsfavoritelimit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

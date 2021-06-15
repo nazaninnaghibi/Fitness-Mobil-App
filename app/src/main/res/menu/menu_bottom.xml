@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="@color/white">
+    <item
+        android:id="@+id/item_search"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/search"
+        app:cnb_backgroundColor="@color/background"
+        app:cnb_iconColor="@color/dark_violet"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/dark_violet" />
+
+    <item
+        android:id="@+id/item_exercise"
+        android:enabled="true"
+        android:icon="@drawable/exercise"
+        android:title="@string/exercise"
+        app:cnb_backgroundColor="@color/background"
+        app:cnb_iconColor="@color/dark_violet"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/dark_violet" />
+
+
+    <item
+        android:id="@+id/item_diet"
+        android:enabled="true"
+        android:icon="@drawable/diet"
+        android:title="@string/diet"
+        app:cnb_backgroundColor="@color/background"
+        app:cnb_iconColor="@color/dark_violet"
+        app:cnb_textColor="@color/dark_violet" />
+
+    <item
+        android:id="@+id/item_profile"
+        android:enabled="true"
+        android:icon="@drawable/user"
+        android:title="@string/profile"
+        app:cnb_backgroundColor="@color/background"
+        app:cnb_iconColor="@color/dark_violet"
+        app:cnb_textColor="@color/dark_violet" />
+
+
+</menu>

@@ -1,0 +1,90 @@
+plugins {
+    id 'com.android.application'
+    id 'androidx.navigation.safeargs'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.fitness"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    def appcompat = "1.2.0"
+    implementation "androidx.appcompat:appcompat:$appcompat"
+    def constraintlayout = "2.0.4"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    def material = "1.3.0"
+    implementation "com.google.android.material:material:$material"
+    def retrofit = "2.9.0"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    def lifecycle = "2.3.1"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle"
+    def rxandroid = "2.1.0"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxandroid"
+    def rxjava = "2.2.9"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava"
+    def nav_version = "2.3.5"
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+    def avi = "2.1.3"
+    implementation "com.wang.avi:library:$avi"
+    def volley = "1.2.0"
+    implementation "com.android.volley:volley:$volley"
+    def Toasty = "1.5.0"
+    implementation "com.github.GrenderG:Toasty:$Toasty"
+    def adapter = "2.5.0"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$adapter"
+    def glide = "4.12.0"
+    implementation "com.github.bumptech.glide:glide:$glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide"
+    def okhttp3 = "4.4.0"
+    implementation "com.github.bumptech.glide:okhttp3-integration:$okhttp3"
+    def roundeimageview = "2.3.0"
+    implementation "com.makeramen:roundedimageview:$roundeimageview"
+    def osmdroid = "6.1.10"
+    implementation "org.osmdroid:osmdroid-android:$osmdroid"
+    def MultiWaveHeader = "1.0.0-andx"
+    implementation "com.scwang.wave:MultiWaveHeader:$MultiWaveHeader"
+    def NumberSlidingPicker = "1.0.3"
+    implementation "com.github.sephiroth74:NumberSlidingPicker:$NumberSlidingPicker"
+    def chip_navigation_bar = "1.3.4"
+    implementation "com.ismaeldivita.chipnavigation:chip-navigation-bar:$chip_navigation_bar"
+    def FlipTabs = "v1.5"
+    implementation "com.github.Chrisvin:FlipTabs:$FlipTabs"
+    def number_picker = "2.4.12"
+    implementation "com.shawnlin:number-picker:$number_picker"
+    def gruveo = "0.7.6"
+    implementation "org.bitbucket.gruveo:gruveo-sdk-android:$gruveo"
+    def multidex = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex"
+    def legacy_support_v4 = "1.0.0"
+    implementation "androidx.legacy:legacy-support-v4:$legacy_support_v4"
+}

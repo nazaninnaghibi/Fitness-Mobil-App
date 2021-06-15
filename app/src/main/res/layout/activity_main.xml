@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        tools:context=".view.activity.MainActivity">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            android:layout_marginBottom="10dp"
+            android:layout_above="@id/navigation_bar"
+            app:layout_constraintBottom_toTopOf="@+id/navigation_bar"
+            app:navGraph="@navigation/navigation" />
+
+        <com.ismaeldivita.chipnavigation.ChipNavigationBar
+            android:id="@+id/navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_bottombar"
+            android:elevation="16dp"
+            android:padding="8dp"
+            app:cnb_addBottomInset="true"
+            app:cnb_addLeftInset="true"
+            app:labelVisibilityMode="labeled"
+            app:cnb_iconSize="20sp"
+            app:cnb_addRightInset="true"
+            app:cnb_addTopInset="true"
+            app:cnb_menuResource="@menu/menu_bottom"
+            app:cnb_orientationMode="horizontal"
+            app:cnb_unselectedColor="@color/white" />
+
+
+    </RelativeLayout>
+</layout>

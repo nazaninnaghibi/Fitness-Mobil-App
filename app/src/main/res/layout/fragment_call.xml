@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/main_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".view.fragment.CallFragment">
+
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:background="@color/bright_purple">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:contentDescription="@string/app_name"
+                android:rotation="180"
+                android:scaleType="fitXY"
+                android:src="@drawable/right" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/main_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:ems="12"
+            android:textColor="@color/white"
+            android:hint="@string/enter_your_secret_key"
+            android:inputType="text"
+            android:textColorHint="@color/white"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:id="@+id/main_buttons_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/RelativeLayout"
+            android:layout_alignStart="@+id/main_edittext"
+            android:layout_alignEnd="@+id/main_edittext"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/main_video_button"
+                style="@style/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="@string/video_call"
+                tools:ignore="ButtonStyle" />
+
+
+            <Button
+                android:id="@+id/main_voice_button"
+                style="@style/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="@string/voice_call"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/window_video_button"
+            style="@style/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/main_buttons_holder"
+            android:layout_alignStart="@+id/main_edittext"
+            android:layout_alignEnd="@+id/main_edittext"
+            android:layout_margin="5dp"
+            android:text="@string/video_call_in_window" />
+
+        <FrameLayout
+            android:id="@+id/container_frg"
+            android:layout_width="350dp"
+            android:layout_below="@+id/window_video_button"
+            android:layout_height="400dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</layout>
